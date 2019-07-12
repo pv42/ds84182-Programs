@@ -47,8 +47,8 @@ local function trilaterate( A, B, C )
 end
 
 local function narrow( p1, p2, fix )
-	local dist1 = math.abs( (p1 - fix.vPosition):length() - fix.nDistance )
-	local dist2 = math.abs( (p2 - fix.vPosition):length() - fix.nDistance )
+	local dist1 = math.abs( (p1 - fix.position):length() - fix.distance )
+	local dist2 = math.abs( (p2 - fix.position):length() - fix.distance )
 	
 	if math.abs(dist1 - dist2) < 0.01 then
 		return p1, p2
